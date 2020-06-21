@@ -1,0 +1,58 @@
+
+
+<main role="main" class="container">
+
+
+
+  <table class="table table-bordered">
+    <tr>
+      <th>ลำดับ</th>
+      <th>ชื่อครอส</th>
+      <th>ราคา</th>
+    </tr>
+    <tr *ngFor="let c of courses;let i=index">
+      <td>{{i+1}}</td>
+      <td>{{c.name}}</td>
+      <td>{{c.price}}</td>
+    </tr>
+  </table>
+
+  <div class="jumbotron">
+    <img [src]="logo" [width]="imgWidth"/><br/>
+    <p [ngClass]="{ title: isActive }">
+    ชื่อ: {{title}} <br/>
+    อายุ: {{age}} ปี <br/>
+    อีเมล์:  {{info.email}}
+    </p>
+
+
+    <button type="button" class="btn btn-danger" (click)="go()" >Danger</button>
+<br/>
+<br/>
+<br/>
+    <section class="container">
+      <div class="row">
+        <button type="button" class="btn btn-primary">Primary</button>
+        <button type="button" class="btn btn-secondary">Secondary</button>
+        <button type="button" class="btn btn-success">Success</button>
+        <button type="button" class="btn btn-danger">Danger</button>
+        <button type="button" class="btn btn-warning">Warning</button>
+        <button type="button" class="btn btn-info">Info</button>
+        <button type="button" class="btn btn-light">Light</button>
+        <button type="button" class="btn btn-dark">Dark</button>
+      </div>
+    </section>
+  </div>
+
+  <div [ngStyle]="{ color:'red',backgroundColor:myColor }">
+    test
+  </div>
+
+  <ul>
+    <li *ngFor="let u of users">
+      {{u}}
+    </li>
+  </ul>
+</main>
+
+
